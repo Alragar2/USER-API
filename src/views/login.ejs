@@ -1,0 +1,16 @@
+<!-- filepath: c:\Users\alvar\Desktop\Practicas\User-API\src\views\login.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Iniciar sesión</h1>
+    <form action="/usuarios/login" method="POST">
+        <input type="text" name="email" placeholder="Correo" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <button type="submit">Entrar</button>
+    </form>
+    <a href="/usuarios/register">Registrarse</a>
+</body>
+</html>
