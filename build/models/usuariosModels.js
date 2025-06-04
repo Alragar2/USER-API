@@ -27,7 +27,7 @@ __decorate([
     __metadata("design:type", String)
 ], Usuario.prototype, "apellido", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ unique: true }),
     __metadata("design:type", String)
 ], Usuario.prototype, "email", void 0);
 __decorate([
@@ -42,6 +42,18 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Usuario.prototype, "telefono", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        type: "enum",
+        enum: ["admin", "user"],
+        default: "user"
+    }),
+    __metadata("design:type", String)
+], Usuario.prototype, "role", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ default: false }),
+    __metadata("design:type", Boolean)
+], Usuario.prototype, "is_provider", void 0);
 exports.Usuario = Usuario = __decorate([
     (0, typeorm_1.Entity)('usuarios')
 ], Usuario);

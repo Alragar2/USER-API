@@ -24,4 +24,14 @@ export class Usuario extends BaseEntity {
     @Column()
     telefono: string;
 
+    @Column({
+        type: "enum",
+        enum: ["admin", "user"],
+        default: "user"
+    })
+    role: string;
+
+    @Column({ default: false })
+    is_provider: boolean;
+ 
 }
